@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un Livre</title>
+
+    <link th:href="@{/static/style.css}" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="/">Liste des livres</a></li>
+        <li><a href="/emprunteur">Liste des emprunteurs</a></li>
+        <li><a href="/livre/form/add">Ajouter un livre</a></li>
+        <li><a href="/emprunteur/form/add">Ajouter un emprunteur</a></li>
+    </ul>
+</nav>
+<h1>Ajouter/Modifier un livre</h1>
+<form method="post" th:object="${livre}">
+    <label>Titre :</label>
+    <input type="text" name="titre" id="titre" th:field="${livre.titre}">
+    <label>Auteur :</label>
+    <input type="text" name="auteur" id="auteur" th:field="${livre.auteur}">
+    <label>Edition :</label>
+    <input type="text" name="edition" id="edition" th:field="${livre.edition}">
+    <label>Description :</label>
+    <input type="text" name="description" id="description" th:field="${livre.description}">
+    <button type="submit">Ajouter</button>
+</form>
+<footer>
+    <p>Site Bilio @Emilie</p><p>Version 1.0</p>
+</footer>
+</body>
+</html>

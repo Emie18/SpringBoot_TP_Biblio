@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link th:href="@{/static/style.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Liste des livres</a></li>
+            <li><a href="/emprunteur">Liste des emprunteurs</a></li>
+            <li><a href="/livre/form/add">Ajouter un livre</a></li>
+            <li><a href="/emprunteur/form/add">Ajouter un emprunteur</a></li>
+        </ul>
+    </nav>
+</header>
+<h1>Liste de livres</h1>
+<ul class="liste_livre">
+    <li  th:each="livre:${livres}" >
+          <p th:text=" 'Titre : '+${livre.titre} +' AUTEUR : '+${livre.auteur}+'    Edition: '+${livre.edition}"></p>
+        <a th:href="@{/livre/{id}(id=${livre.id})}">Détail</a>
+            <a th:href="@{/livre/maj/{id}(id=${livre.id})}">Modifier</a>
+        <a th:href="@{/livre/del/{id}(id=${livre.id})}">Suprimer</a>
+    </li>
+</ul>
+<footer>
+    <p>Site Bilio @Emilie</p><p>Version 1.0</p>
+</footer>
+</body>
+
+</html>

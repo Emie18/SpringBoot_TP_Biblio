@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emprunteur</title>
+
+    <link th:href="@{/static/style.css}" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="/">Liste des livres</a></li>
+        <li><a href="/emprunteur">Liste des emprunteurs</a></li>
+        <li><a href="/livre/form/add">Ajouter un livre</a></li>
+        <li><a href="/emprunteur/form/add">Ajouter un emprunteur</a></li>
+    </ul>
+</nav>
+<h1>Liste des Emprunteurs</h1>
+<table>
+    <tbody>
+    <tr>
+        <th>Nom</th>
+        <th>Numero</th>
+        <th>Action</th>
+    </tr>
+
+    <tr th:each="em:${emprunteurs}">
+        <td th:text = "${em.nom}"></td>
+        <td th:text = "${em.numero}"></td>
+        <td><a th:href="@{/emprunteur/maj/{id}(id=${em.id})}">✏️</a><a th:href="@{/emprunteur/del/{id}(id=${em.id})}">🗑️</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer>
+    <p>Site Bilio @Emilie</p><p>Version 1.0</p>
+</footer>
+</body>
+</html>

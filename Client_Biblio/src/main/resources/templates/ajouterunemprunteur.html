@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJOUT emprunteur</title>
+
+    <link th:href="@{/static/style.css}" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="/">Liste des livres</a></li>
+        <li><a href="/emprunteur">Liste des emprunteurs</a></li>
+        <li><a href="/livre/form/add">Ajouter un livre</a></li>
+        <li><a href="/emprunteur/form/add">Ajouter un emprunteur</a></li>
+    </ul>
+</nav>
+<h1>Ajouter ou Modifier un Emprunteur</h1>
+<form method="post" th:object="${emprunteur}">
+    <label>Nom :</label>
+    <input type="text" name="nom" id="nom" th:field="${emprunteur.nom}">
+    <label>Numéro :</label>
+    <input type="text" name="numero" id="numero" th:field="${emprunteur.numero}">
+    <button type="submit">Ajouter</button>
+</form>
+<footer>
+    <p>Site Bilio @Emilie</p><p>Version 1.0</p>
+</footer>
+</body>
+</html>
