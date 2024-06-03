@@ -25,7 +25,7 @@ git clone https://github.com/Emie18/SpringBoot_TP_Biblio.git
 
 2. Assurez-vous d'avoir une instance de MySQL installée sur votre système.
 
-3. Importez le script `scripte.sql` dans votre base de données MySQL pour créer la structure de la base de données nécessaire au fonctionnement de l'application.
+3. Importez le script `biblio.sql` dans votre base de données MySQL pour créer la structure de la base de données nécessaire au fonctionnement de l'application.
 
 4. Dans le fichier `src/main/resources/application.properties`, adaptez les paramètres d'authentification de la base de données (username, mot de passe) en fonction de votre configuration.
 
